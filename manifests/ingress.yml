@@ -25,6 +25,8 @@ spec:
                   number: 9191
             path: /payment/?(.*)
             pathType: Prefix
+            
+            
 
             
 # Install ingress on cluster
