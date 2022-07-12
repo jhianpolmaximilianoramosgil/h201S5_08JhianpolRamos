@@ -21,11 +21,15 @@ Las operaciones que persisten en la base de datos tienen un conjunto de subproce
 
 # Correr 
 - Ejecute zookeeper y kafka brokers:
-docker-compose up -d
+```
+docker-compose up -d :
+```
 - Ejecute el servicio de pedidos y la aplicación del servicio de pago
 - Realice una solicitud POSTlocalhost:9192/orders con el cuerpo de la solicitud:
+```
 {
     "userId": 1,
     "productId": 1
 }
+```
 - Realice una solicitud GETlocalhost:9192/orders y vea el estado del pedido actualizado
