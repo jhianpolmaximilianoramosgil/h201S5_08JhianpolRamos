@@ -1,2 +1,2 @@
 # h201S5_08JhianpolRamos
-Hackathon 2022 - 5toSemestre
+Requisito hackaton 2022 - 5toSemestre
