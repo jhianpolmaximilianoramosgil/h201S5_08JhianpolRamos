@@ -22,7 +22,7 @@ Las operaciones que persisten en la base de datos tienen un conjunto de subproce
 # Correr 
 - Ejecute zookeeper y kafka brokers:
 ```
-docker-compose up -d :
+docker-compose up -d 
 ```
 - Ejecute el servicio de pedidos y la aplicación del servicio de pago
 - Realice una solicitud POSTlocalhost:9192/orders con el cuerpo de la solicitud:
@@ -33,3 +33,18 @@ docker-compose up -d :
 }
 ```
 - Realice una solicitud GETlocalhost:9192/orders y vea el estado del pedido actualizado
+- Ejecutar manifiestos:
+```
+cd manifests
+# Install ingress on cluster
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.41.2/deploy/static/provider/cloud/deploy.yaml
+kubectl apply -f .
+```
+- Realice una solicitud POSTlocalhost/order/orders con el cuerpo de la solicitud:
+```
+{
+    "userId": 1,
+    "productId": 1
+}
+```
+- Realice una solicitud GETlocalhost/order/orders y vea el estado del pedido actualizad
