@@ -10,4 +10,4 @@ Las operaciones que persisten en la base de datos tienen un conjunto de subproce
 
 # Diseño de sistemas
 
-<img src ="https://raw.githubusercontent.com/martinsam16/saga-choreography/main/diagram.png" align="center" style="width: 200px"/>
+<img src ="https://raw.githubusercontent.com/martinsam16/saga-choreography/main/diagram.png" align="center" style="width: 900px"/>
