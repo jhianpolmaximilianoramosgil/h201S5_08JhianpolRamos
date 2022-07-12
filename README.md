@@ -18,3 +18,14 @@ Las operaciones que persisten en la base de datos tienen un conjunto de subproce
 - A PaymentEventse emite al tema de Kafka payments, que PaymentEventHandlerescucha en la aplicación de servicio de pago.
 - Si el PaymentEventestado es APPROVED, guarda la transacción en el TransactionRepository. Se TransactionEventemite una A al transactionstema.
 - El TransactionEventConsumerlee esto en el servicio de pedidos, si tiene éxito, lo OrderRepositoryguarda como ORDER_COMPLETED, de lo contrarioORDER_FAILED
+
+# Correr 
+- Ejecute zookeeper y kafka brokers:
+docker-compose up -d
+- Ejecute el servicio de pedidos y la aplicación del servicio de pago
+- Realice una solicitud POSTlocalhost:9192/orders con el cuerpo de la solicitud:
+{
+    "userId": 1,
+    "productId": 1
+}
+- Realice una solicitud GETlocalhost:9192/orders y vea el estado del pedido actualizado
