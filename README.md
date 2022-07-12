@@ -8,4 +8,4 @@ Requisito hackaton 2022 - 5toSemestre
 
 Las operaciones que persisten en la base de datos tienen un conjunto de subprocesos dedicado y bien ajustado, ya que puede aislar las llamadas de E/S de bloqueo por separado de la aplicación.
 
-**Diseño de sistemas
+**Diseño de sistemas**
